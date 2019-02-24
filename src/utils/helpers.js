@@ -12,7 +12,6 @@ export function convertBlobToBase64(blob) {
 
 // Fetch image from remote url and convert to base64
 export async function fetchImageToBase64(url) {
-    console.log(url);
     const response = await fetch(url);
     const blob = await response.blob();
     const base64data = await convertBlobToBase64(blob);
