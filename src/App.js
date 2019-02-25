@@ -9,6 +9,7 @@ import { ButtonPrimary, ButtonSecondary } from './layouts/buttons';
 import { GamePad, GamePadCanvasWrapper, GamePadContent, GamePadCanvas, GamePadHeading, GamePadControl } from './layouts/gamepad';
 import GameLayout from './layouts/game-layout';
 import { GameStats, GameStatItem } from './layouts/game-stats';
+import GameFooter from './layouts/game-footer';
 
 import GlobalStyle from './layouts/global';
 
@@ -143,6 +144,9 @@ class App extends Component {
               : null} 
             {isEndGame ? <EndGame resetGame={this.resetGame} score={score}/> : null}
           </GamePad>
+          <GameFooter>
+            Designed and built with love by <a href='https://www.raykuo.com' target='blank'>Ray Kuo</a> | <a href='https://github.com/raykuonz/doesthispersonnotexist' target='blank'>Github</a>
+          </GameFooter>
         </GameLayout>
       </>
     );
